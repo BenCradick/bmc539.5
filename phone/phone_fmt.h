@@ -1,10 +1,10 @@
 //
-// Created by Ben Cradick on 11/20/17.
+// Created by Ben Cradick on 4/13/18.
 //
 /*TODO: tuh done*/
 
-#ifndef CRADICK_PA5_PHONE_FMT_H
-#define CRADICK_PA5_PHONE_FMT_H
+#ifndef BMC539_5_PHONE_FMT_H
+#define BMC539_5_PHONE_FMT_H
 /*
  * Takes in a character input strips out all the non integer characters, grabs the first ten and puts them into
  * the format of a telephone standardized for the United States (xxx)xxx-xxxx
@@ -25,4 +25,4 @@
  * 9) prints the phone number it was given in the correct format
  */
 void formatNumber(int len, char input[len]);
-#endif //CRADICK_PA5_PHONE_FMT_H
+#endif //BMC539_5_PHONE_FMT_H
