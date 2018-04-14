@@ -9,4 +9,3 @@ sieve.o: sieve.c
 
 clean:
 	/bin/rm -f *.o $(TARGET)
-git
