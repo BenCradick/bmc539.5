@@ -1,0 +1,6 @@
+CMakeLists.txt
+shuffle
+
+*.o*
+
+.idea/

@@ -1,13 +1,12 @@
 //Ben Cradick
-//cs2750 Pa5
-//November 19 2017
+// 4-12-18
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "phone_fmt.h"
 
 
-//TODO: COMMENT EVERYTHING
+//~TODO: COMMENT EVERYTHING. DONE!
 int main(){
     char phoneNumber[200];
     int len;
@@ -24,7 +23,7 @@ int main(){
             printf("Too many characters entered into the field\n");
         }
     }
-    //caps ender of input string with null terminator
+    //caps end of input string with null terminator
     else{
         phoneNumber[strlen(phoneNumber)-1] = '\0';
     }
