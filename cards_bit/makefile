@@ -1,14 +1,14 @@
 CC = gcc
 CFLAGS = -std=c99
-TARGET = main
-OBJS = main.o
+TARGET = sb
+OBJS = sb.o
 $(TARGET): $(OBJS)
 	$(CC) -o $(TARGET) $(OBJS)
-main.o: main.c
-	$(CC) -c main.c
+main.o: sb.c
+	$(CC) -c sb.c
 
 debug:
-	gcc main.c -DDEBUG -o main
+	gcc sb.c -DDEBUG -o $(TARGET)
 
 clean:
 	/bin/rm -f *.o* $(TARGET)
