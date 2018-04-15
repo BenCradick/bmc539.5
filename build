@@ -1,0 +1,28 @@
+#usr/bin/sh
+if [[ $1 == "clean" ]]; then
+cd phone
+make $1
+cd ..
+cd sb
+make $1
+cd ..
+cd sieve
+make $1
+cd ..
+cd shuffle
+make $1
+cd ..
+else
+cd phone
+make
+cd ..
+cd sb
+make $1
+cd ..
+cd sieve
+make
+cd ..
+cd shuffle
+make
+cd ..
+fi
