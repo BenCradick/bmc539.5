@@ -31,8 +31,12 @@ int main(){
     card_t deck[52];
     //initialize deck of cards to be brand new texas hold'em poker deck, there are different types of decks of cards
     while (k < 52) {
-        for (suit_t i = clubs; i <= spades; i++) {
-            for (unsigned int j = 1; j <= 13; j++) {
+        suit_t i;
+        for (i = clubs; i <= spades; i++)
+        {
+            unsigned int j;
+            for (j = 1; j <= 13; j++)
+            {
                 deck[k].suit = i;
                 deck[k].number = j;
                 ++k;
@@ -41,7 +45,8 @@ int main(){
     }
 
     //shuffle, really should do this step 7 times to get a better shuffle
-    for(int i = 0; i < 52; i++){
+    int i;
+    for(i = 0; i < 52; i++){
         int r = rand()%52;
         //the binary index position represents r%52.
         //if r = 4 then r%52 = 4 that means starting pos will be 1<<=4 or 00001000
@@ -85,12 +90,15 @@ int main(){
         *(deck + r) = temp;
 
     }
-
+    #ifndef DEBUG
     printArray(deck);
     printf("\v");
+    #endif
     qsort(deck, 52, sizeof(card_t), compare);
+    #ifndef DEBUG
     printArray(deck);
     printf("\v");
+    #endif
 
     //prints unsigned characters of order as integers, if the shuffle is staying withing bounds results will be
     //255 255 255 255 255 255 15 assuming standard byte size of 8 bits
@@ -119,7 +127,9 @@ int compare(const void * a, const void * b){
 
 
 void printArray(card_t * deck){
-    for(unsigned short n = 0; n < 52; n++){
+    unsigned short n;
+    for ( n = 0; n < 52; n++)
+    {
         //converts suite type to human readable form that corresponds with the enumerated type.
         switch(deck[n].suit) {
             case 0 :
