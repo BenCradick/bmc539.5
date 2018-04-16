@@ -19,7 +19,7 @@ cd ..
 cd sb
 make $1
 cd ..
-cd sieve
+cd sieve $1
 make
 cd ..
 cd shuffle

@@ -17,8 +17,10 @@ int main(){
     srand(time(0));
     int k = 0;
     while (k < 52) {
-        for (suit_t i = 0; i <= 3; i++) {
-            for (unsigned int j = 1; j <= 13; j++) {
+        suit_t i;
+        for (i = 0; i <= 3; i++) {
+            unsigned int j;
+            for (j = 1; j <= 13; j++) {
                 deck[k].suit = i;
                 deck[k].number = j;
                 ++k;
@@ -27,7 +29,8 @@ int main(){
     }
 
     //shuffles the deck
-    for(unsigned short m; m < 52; m++){
+    unsigned short m;
+    for(m; m < 52; m++){
         int r = rand()%52;
         card_t temp = *deck;
         *deck = *(deck + r);
@@ -51,7 +54,8 @@ int compare(const void * a, const void * b){
 }
 
 void printArray(card_t * deck){
-    for(unsigned short n; n < 52; n++){
+    unsigned short n;
+    for(n = 0; n < 52; n++){
         //converts suite type to human readable form that corresponds with the enumerated type.
         switch(deck[n].suit) {
             case 0 :

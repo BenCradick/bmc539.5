@@ -4,7 +4,8 @@ This is the fifth project for cs 2750
 
 ### Sieve
 This is a C implementation of the Sieve of Eratosthenes using unsigned character arrays to hold the number line. 
-Simply type make in the subdirectory to build the executable sieve which can be run by typing ./sieve
+Simply type make in the subdirectory to build the executable sieve which can be run by typing ./sieve.
+Sieve also includes a debug script
 
 ### Phone
 Converts an input stream containing numbers and letters to the (xxx)xxx-xxxx phoen number format, there is a test script
